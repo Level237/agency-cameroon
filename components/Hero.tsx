@@ -34,9 +34,10 @@ export default function Hero() {
         <span className="text-[#e09a39]"> your branding</span> with
         <span className="text-[#e09a39]"> Agency</span>
       </h1>
-      <p className="mt-6 text-lg leading-8 text-gray-300">Elevate Your Productivity With Zynx, Your Personalized Workflow
+      <p className="mt-6 text-lg leading-8 text-gray-300">Elevate Your Productivity With Agency, Your Personalized Workflow
         Assistant</p>
       <div className="mt-5 flex items-center justify-center gap-x-6">
+      <Button variant="outline" className='text-white'>Testimonials</Button>
         <Button variant="default" className='text-black'>our portfolio</Button>
       </div>
     </div>

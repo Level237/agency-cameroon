@@ -27,7 +27,7 @@ export default function Header() {
        
         </div>
         <div className="w-[400px]">
-        <NavigationMenu className="text-white">
+        <NavigationMenu  className="text-white">
             <NavigationMenuList>
             <NavigationMenuItem className="">
             <NavigationMenuTrigger>Services</NavigationMenuTrigger>
@@ -44,7 +44,7 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
             <NavigationMenuTrigger>PortFolio</NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-[#09090B] text-white">
+            <NavigationMenuContent  className="bg-[#09090B] text-white">
                 <ul className="p-4">
                 <li className="row-span-3">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -65,11 +65,11 @@ export default function Header() {
             <NavigationMenuItem>
             
             <NavigationMenuLink>
-                    <Link href="/" className="text-white">About us</Link>
+                    <Link href="/">About us</Link>
                 </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuItem className="mr-5">
+            <NavigationMenuLink className="">
                     <Link href="/" className="">Contact</Link>
                 </NavigationMenuLink>
             
