@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge"
 import ListBrand from "@/components/List-brand";
+import { Separator } from "@/components/ui/separator";
 export default function Home() {
   return (
    <div>
@@ -17,9 +18,11 @@ export default function Home() {
    </section>
 
    <section className="container m-auto mt-36">
-      <div className="flex justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
         <h2 className="text-white font-bold text-4xl">Nos Services</h2>
+        <Separator className="w-36 h-1 mr-16 bg-[#e09a39]"/>
       </div>
+      
    </section>
    </div>
   );
