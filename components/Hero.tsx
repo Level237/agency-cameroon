@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button'
 
 export default function Hero() {
   return (
-    <div>
-      <div className="relative isolate overflow-hidden bg-[#09090B]">
+    
+      <div className="relative isolate border-b-[0.1px] border-[#e09a3925] overflow-hidden bg-[#09090B]">
   <svg
     className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
     aria-hidden="true">
@@ -43,6 +43,6 @@ export default function Hero() {
     </div>
   </div>
 </div>
-    </div>
+ 
   )
 }
