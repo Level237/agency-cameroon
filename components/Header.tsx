@@ -8,10 +8,23 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
   } from "@/components/ui/navigation-menu"
+
+  import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } from "@/components/ui/dialog"
+
 import Image from "next/image";
 
 import Link from "next/link"
 import { FaSearch } from "react-icons/fa";
+import { Button } from "./ui/button";
 
 export default function Header() {
   return (
@@ -29,7 +42,7 @@ export default function Header() {
         <div className="w-[400px]">
         <NavigationMenu  className="text-white">
             <NavigationMenuList>
-            <NavigationMenuItem className="">
+            <NavigationMenuItem className="hover:bg-[#e09a3969] hover:rounded">
             <NavigationMenuTrigger>Services</NavigationMenuTrigger>
             <NavigationMenuContent className="bg-[#09090B] text-white">
                 <ul className="">
@@ -42,7 +55,7 @@ export default function Header() {
             </NavigationMenuContent>
             
             </NavigationMenuItem>
-            <NavigationMenuItem>
+            <NavigationMenuItem className="hover:bg-[#e09a3969] hover:rounded">
             <NavigationMenuTrigger>PortFolio</NavigationMenuTrigger>
             <NavigationMenuContent  className="bg-[#09090B] text-white">
                 <ul className="p-4">
@@ -62,7 +75,7 @@ export default function Header() {
             </NavigationMenuContent>
             
             </NavigationMenuItem>
-            <NavigationMenuItem>
+            <NavigationMenuItem asChild>
             
             <NavigationMenuLink>
                     <Link href="/">About us</Link>
@@ -79,7 +92,36 @@ export default function Header() {
         </NavigationMenu>
         </div>
         <div className="w-[40px] text-white cursor-pointer">
-            <FaSearch/>
+        <Dialog>
+      <DialogTrigger asChild>
+        <FaSearch/>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+          <DialogTitle>Share link</DialogTitle>
+          <DialogDescription>
+            Anyone who has this link will be able to view this.
+          </DialogDescription>
+        </DialogHeader>
+        <div className="flex items-center space-x-2">
+          <div className="grid flex-1 gap-2">
+            
+            
+          </div>
+          <Button type="submit" size="sm" className="px-3">
+            <span className="sr-only">Copy</span>
+            
+          </Button>
+        </div>
+        <DialogFooter className="sm:justify-start">
+          <DialogClose asChild>
+            <Button type="button" variant="secondary">
+              Close
+            </Button>
+          </DialogClose>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
         </div>
         
     </div>
