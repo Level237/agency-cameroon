@@ -9,23 +9,14 @@ import {
     navigationMenuTriggerStyle,
   } from "@/components/ui/navigation-menu"
 
-  import {
-    Dialog,
-    DialogClose,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-  } from "@/components/ui/dialog"
+
 
 import Image from "next/image";
 
 import Link from "next/link"
-import { FaSearch } from "react-icons/fa";
-import { Button } from "./ui/button";
+
 import { ToggleTheme } from "./ToggleTheme";
+import Search from "./Search";
 
 export default function Header() {
   return (
@@ -92,9 +83,7 @@ export default function Header() {
             </NavigationMenuList>
         </NavigationMenu>
         </div>
-        <div>
-          <ToggleTheme/>
-        </div>
+       <Search/>
         
     </div>
    </header>
