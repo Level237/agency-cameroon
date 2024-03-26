@@ -14,7 +14,7 @@ import { Button } from "./ui/button";
 import { CommandDemo } from './Command';
 export default function Search() {
   return (
-    <div className="w-[40px] text-white cursor-pointer">
+    <div className="w-[40px] z-[400] text-white cursor-pointer">
     <Dialog>
   <DialogTrigger asChild>
     <FaSearch/>
