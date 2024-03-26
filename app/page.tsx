@@ -10,7 +10,7 @@ export default function Home() {
    <section className="relative">
    <Hero/>
     <div className="container absolute mt-[-52px]  flex justify-center items-center">
-    <div className="flex border border-[#e09a3956]  mb-36 justify-center rounded bg-[#2b0f10] w-[80vw] h-full">
+    <div className="flex border border-[#e09a3956] z-50  mb-36 justify-center rounded bg-[#2b0f10a4] w-[80vw] h-full">
       <Image
             src="/agency.png"
             width="100"
@@ -50,6 +50,10 @@ export default function Home() {
       </div>
     </div>
       
+   </section>
+
+   <section>
+    
    </section>
    </div>
   );
