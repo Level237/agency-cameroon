@@ -65,32 +65,25 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
+
+@font-face {
+  font-family : kreaton;
+  src : url("/fonts/secondary/kreaton-bold.otf");
+}
+
+@font-face {
+  font-family : kontanter;
+  src : url("/fonts/kontanter-bold.otf");
+}
 * {
   box-sizing: border-box;
   list-style: none;
 }
 
-hr.fancy-line { 
-  border: 0; 
-  height: 1px;
-
+.font-primary,button{
+  font-family : kontanter;
 }
-hr.fancy-line:before {
-  top: -0.5em;
-  height: 1em;
-}
-hr.fancy-line:after {
-  content:'';
-  height: 0.5em;
-  top: 1px;
+.font-secondary{
+  font-family : kreaton;
 }
 
-hr.fancy-line:before, hr.fancy-line:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-}
-
-hr.fancy-line, hr.fancy-line:before {
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
-}

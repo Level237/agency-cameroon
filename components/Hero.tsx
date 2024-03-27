@@ -29,12 +29,12 @@ export default function Hero() {
   </div>
   <div className="mt-[-50px] flex h-screen items-center justify-center">
     <div className="max-w-full flex-shrink-0 px-4 text-center lg:mx-0 lg:max-w-3xl lg:pt-8">
-      <h1 className="mt-10 text-5xl font-bold tracking-tight text-white sm:text-6xl">
+      <h1 className="mt-10 font-secondary text-5xl font-bold tracking-tight text-white sm:text-6xl">
         revolutionize
         <span className="text-[#e09a39]"> your branding</span> with
-        <span className="text-[#e09a39]"> Agency</span>
+        <span className="text-[#e09a39] font-primary"> Agency</span>
       </h1>
-      <p className="mt-6 text-lg leading-8 text-gray-300">Elevate Your Productivity With Agency, Your Personalized Workflow
+      <p className="mt-6 font-primary text-lg leading-8 text-gray-300">Elevate Your Productivity With Agency, Your Personalized Workflow
         Assistant</p>
       <div className="mt-5 flex items-center justify-center gap-x-6">
       <Button variant="outline" className='text-white'>Testimonials</Button>
