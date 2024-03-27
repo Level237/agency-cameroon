@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 export default function Hero() {
   return (
     
-      <div className="relative  isolate border-b-[0.1px] border-[#e09a3925] overflow-hidden bg-[#09090B]">
+      <div className="relative  isolate border-b-[0.1px] border-[#e8d1bb38] overflow-hidden bg-black">
   <svg
     className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
     aria-hidden="true">
@@ -29,16 +29,16 @@ export default function Hero() {
   </div>
   <div className="mt-[-50px] flex h-screen items-center justify-center">
     <div className="max-w-full flex-shrink-0 px-4 text-center lg:mx-0 lg:max-w-3xl lg:pt-8">
-      <h1 className="mt-10 font-secondary text-5xl font-bold tracking-tight text-white sm:text-6xl">
+      <h1 className="mt-10 font-secondary text-5xl font-bold tracking-tight text-black dark:text-white sm:text-6xl">
         revolutionize
-        <span className="text-[#e09a39]"> your branding</span> with
-        <span className="text-[#e09a39] font-primary"> Agency</span>
+        <span className="text-[#e8d1bb"> your branding</span> with
+        <span className="text-[#513417] font-primary dark:text-[#724a23]"> Agency</span>
       </h1>
-      <p className="mt-6 font-primary text-lg leading-8 text-gray-300">Elevate Your Productivity With Agency, Your Personalized Workflow
+      <p className="mt-6 font-primary text-lg leading-8 text-black dark:text-white">Elevate Your Productivity With Agency, Your Personalized Workflow
         Assistant</p>
       <div className="mt-5 flex items-center justify-center gap-x-6">
-      <Button variant="outline" className='text-white'>Testimonials</Button>
-        <Button variant="default" className='text-black'>our portfolio</Button>
+      <Button variant="outline" className='text-[#513417] dark:text-white'>Testimonials</Button>
+        <Button variant="default" className='bg-[#513417] dark:bg-[#e8d1bb] dark:[#513417]'>our portfolio</Button>
       </div>
     </div>
   </div>

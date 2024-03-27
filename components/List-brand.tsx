@@ -4,7 +4,7 @@ import React from 'react'
 import {motion} from "framer-motion"
 export default function ListBrand() {
   return (
-    <div className="flex border border-[#e09a3956] z-50  mb-36 justify-center rounded bg-[#000] w-[80vw] h-full">
+    <div className="flex border border-[#e8d1bb38] z-5  mb-36 justify-center rounded bg-[#000] w-[80vw] h-full">
     
     <motion.div
     initial={{ opacity:0}}
