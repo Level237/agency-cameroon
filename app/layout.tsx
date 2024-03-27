@@ -28,7 +28,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-
+<hr className="fancy-line"></hr>
           {children}
           </ThemeProvider>
           </body>

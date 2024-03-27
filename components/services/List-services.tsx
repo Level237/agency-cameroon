@@ -18,28 +18,17 @@ export default function ListServices() {
      
         className="relative"
       >
-      <Card className="w-full border-[#e09a3925]">
+      <Card className="w-full h-[380px] border-[#e09a3925]">
       <Image
         alt="graphic design"
 
-        className="aspect-video overflow-hidden rounded-t-lg object-cover"
+        className="aspect-video h-full overflow-hidden rounded-t-lg object-cover"
         height={225}
         src="/graphic.jpg"
         width={400}
       />
-      <CardContent className="rounded-b-lg p-6">
-        <CardTitle className=" flex justify-between items-center">
-          <h3 className="text-lg text-[#e09a39]">
-          Graphic Design
-          </h3>
-          <div>
-<Badge variant="outline" className="text-white border-[#cc3333] font-thin">creative</Badge>
-          </div>
-          </CardTitle>
-      </CardContent>
-      <CardFooter className="flex justify-center">
-            
-      </CardFooter>
+     
+     
     </Card>
       </motion.div>
  
