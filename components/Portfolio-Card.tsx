@@ -10,6 +10,24 @@ export default function PortfolioCard(props:any) {
     <motion.div className='relative overflow-hidden h-[300px] min-w-[190px] bg-slate-400 rounded-xl flex justify-center items-center'
     onHoverStart={()=>setShowOverlay(true)}
     onHoverEnd={()=>setShowOverlay(false)}
+    initial={{ 
+      y:100,
+      opacity:0,
+     }}
+     animate={{ 
+      y:0,
+      opacity:1,
+      }}
+      exit={{ 
+        y:100,
+        opacity:0,
+       }}
+       viewport={{ 
+        
+        }}
+      transition={{ 
+        duration:0.7
+       }}
     >
            <AnimatePresence>
 

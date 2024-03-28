@@ -8,10 +8,9 @@ import InfiniteCarousel from "@/components/InfiniteCarousel";
 import PortfolioAnimate from "@/components/PortfolioAnimate";
 import AnimatedTabs from "@/components/AnimatedTab";
 import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
 import PortfolioCard from "@/components/Portfolio-Card";
 import { tabStore } from "@/store/TabStore";
-
+import {motion,AnimatePresence} from "framer-motion"
 
 export default function Home() {
 
@@ -42,11 +41,22 @@ export default function Home() {
       <Separator className="w-[90%] mt-3 h-[0.2px] mb-20 bg-[#e8d1bb2a]"/>
       </div>
         <div className="grid grid-cols-3 gap-5 mb-36">
+          <AnimatePresence>
           {portfolio.map(p=>{
             return (
-              <PortfolioCard key={p.id} src={p.img}/>
+              <motion.div key={p.id}
+              initial={{ 
+                y:100
+               }}
+               animate={{ y:0 }}
+              >
+                  <PortfolioCard key={p.id} src={p.img}/>
+              </motion.div>
+              
             )
           })}
+          </AnimatePresence>
+         
         </div>
       </section>
    </section>
