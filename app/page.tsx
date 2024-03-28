@@ -1,3 +1,4 @@
+'use client'
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ListBrand from "@/components/List-brand";
@@ -9,9 +10,12 @@ import AnimatedTabs from "@/components/AnimatedTab";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import PortfolioCard from "@/components/Portfolio-Card";
+import { tabStore } from "@/store/TabStore";
 
 
 export default function Home() {
+
+  const portfolio=tabStore(s=>s.portfolio)
   return (
    <div>
    <Header/>
@@ -38,12 +42,11 @@ export default function Home() {
       <Separator className="w-[90%] mt-3 h-[0.2px] mb-20 bg-[#e8d1bb2a]"/>
       </div>
         <div className="grid grid-cols-3 gap-5 mb-36">
-          <PortfolioCard src="/img1.jpg"/>
-          <PortfolioCard src="/img2.jpg"/>
-          <PortfolioCard src="/img3.jpg"/>
-          <PortfolioCard src="/img4.jpg"/>
-          <PortfolioCard src="/img5.jpg"/>
-          <PortfolioCard src="/img1.jpg"/>
+          {portfolio.map(p=>{
+            return (
+              <PortfolioCard key={p.id} src={p.img}/>
+            )
+          })}
         </div>
       </section>
    </section>
