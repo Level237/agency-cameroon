@@ -1,14 +1,7 @@
 'use client'
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-let tabs = [
-  { id: "world", label: "World" },
-  { id: "ny", label: "N.Y." },
-  { id: "business", label: "Business" },
-  { id: "arts", label: "Arts" },
-  { id: "science", label: "Science" },
-];
+import { tabs } from "@/data/tabs";
 
 export default function AnimatedTabs() {
   let [activeTab, setActiveTab] = useState(tabs[0].id);

@@ -3,12 +3,16 @@ import { Tabs } from "@/types/Tabs";
 export const tabs:Tabs[]=[
     {
         id:1,
+        label:"All"
+    },
+    {
+        id:2,
         label:"Graphic Design"
     },{
-        id:2,
+        id:3,
         label:"Web development"
     },{
-        id:3,
+        id:4,
         label:"UI Design"
     }
 ]
