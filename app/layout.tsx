@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-[#09090B]">
       <body className={cn(
-          "min-h-screen ",
+          "min-h-screen overflow-x-hidden",
         )}>
           <ThemeProvider
             attribute="class"

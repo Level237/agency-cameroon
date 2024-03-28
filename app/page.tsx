@@ -6,6 +6,7 @@ import ListBrand from "@/components/List-brand";
 import { Separator } from "@/components/ui/separator";
 import ListServices from "@/components/services/List-services";
 import { PinContainer } from "@/components/ui/3d-pin";
+import InfiniteCarousel from "@/components/InfiniteCarousel";
 export default function Home() {
   return (
    <div>
@@ -19,7 +20,14 @@ export default function Home() {
       
    </section>
 
+<section>
+  
+</section>
    <section className="container m-auto mt-36">
+    <div className="mb-20">
+    <InfiniteCarousel/>
+    </div>
+    
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-white font-bold text-4xl font-primary">our Services</h2>
         <Separator className="w-36 h-1 mr-16 bg-[#e09a39]"/>
