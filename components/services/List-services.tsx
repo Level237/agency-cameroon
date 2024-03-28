@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 export default function ListServices() {
   return (
    <>
-   <div className="flex flex-col justify-center items-center">
+   <div className="flex  flex-col justify-center items-center">
         <h2 className="text-white font-bold text-4xl font-primary">our Services</h2>
         <Separator className="w-36 h-1 mr-16 bg-[#e09a39]"/>
       </div>
