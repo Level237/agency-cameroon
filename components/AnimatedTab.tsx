@@ -2,10 +2,13 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { tabs } from "@/data/tabs";
+import { tabStore } from "@/store/TabStore";
 
 export default function AnimatedTabs() {
-  let [activeTab, setActiveTab] = useState(tabs[0].id);
-
+  //let [activeTab, setActiveTab] = useState(tabs[0].id);
+    const tabs=tabStore(s=>s.tabs)
+    const setActiveTab=tabStore(s=>s.setActiveTab)
+    const activeTab=tabStore(s=>s.activeTab)
   return (
     <div className="flex space-x-1">
       {tabs.map((tab) => (
