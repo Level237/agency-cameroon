@@ -7,6 +7,8 @@ import InfiniteCarousel from "@/components/InfiniteCarousel";
 import PortfolioAnimate from "@/components/PortfolioAnimate";
 import AnimatedTabs from "@/components/AnimatedTab";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
+import PortfolioCard from "@/components/Portfolio-Card";
 
 
 export default function Home() {
@@ -35,7 +37,14 @@ export default function Home() {
       <AnimatedTabs/>
       <Separator className="w-[90%] mt-3 h-[0.2px] mb-20 bg-[#e8d1bb2a]"/>
       </div>
-   
+        <div className="grid grid-cols-3 gap-5 mb-36">
+          <PortfolioCard src="/img1.jpg"/>
+          <PortfolioCard src="/img2.jpg"/>
+          <PortfolioCard src="/img3.jpg"/>
+          <PortfolioCard src="/img4.jpg"/>
+          <PortfolioCard src="/img5.jpg"/>
+          <PortfolioCard src="/img1.jpg"/>
+        </div>
       </section>
    </section>
    </div>
