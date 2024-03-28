@@ -25,6 +25,7 @@ export default function Home() {
 </section>
    <section className="container m-auto mt-36">
     <div className="mb-20">
+      <h1 className="mt-10 font-primary text-2xl font-bold tracking-tight text-[#e8d1bb] sm:text-4xl">Attractive Portfolio</h1>
     <InfiniteCarousel/>
     </div>
     
@@ -38,11 +39,11 @@ export default function Home() {
         link="home"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold font-secondary text-[#e8d1bb]  text-base text-slate-100">
+          <h3 className="max-w-xs !pb-2 !m-0 font-bold font-primary text-[#e8d1bb]  text-base text-slate-100">
             Design graphic
           </h3>
           <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
+            <span className="text-slate-500 font-secondary">
               Customizable Tailwind CSS and Framer Motion Components.
             </span>
           </div>
@@ -54,11 +55,11 @@ export default function Home() {
         link="home"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+          <h3 className="max-w-xs !pb-2 !m-0 font-bold font-primary  text-base text-slate-100">
             web development
           </h3>
           <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
+            <span className="text-slate-500 font-secondary">
               Customizable Tailwind CSS and Framer Motion Components.
             </span>
           </div>
@@ -70,11 +71,11 @@ export default function Home() {
         link="/web"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+          <h3 className="max-w-xs !pb-2 !m-0 font-bold font-primary   text-base text-slate-100">
             UI Design
           </h3>
           <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
+            <span className="text-slate-500 font-secondary">
               Customizable Tailwind CSS and Framer Motion Components.
             </span>
           </div>
