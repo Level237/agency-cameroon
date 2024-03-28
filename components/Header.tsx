@@ -31,7 +31,7 @@ export default function Header() {
             />
        
         </div>
-        <div className="w-[400px]">
+        <div className="w-[500px]">
         <NavigationMenu  className="text-white ">
             <NavigationMenuList>
             <NavigationMenuItem className="bg-none hover:bg-[#e09a3969] hover:rounded">
@@ -40,7 +40,17 @@ export default function Header() {
                 <ul className="">
                 <li className="row-span-3 ">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <Link href="/" className="">Developpement web</Link>
+                    <Link href="/" className="font-primary">Graphic Design</Link>
+                </NavigationMenuLink>
+                </li>
+                <li className="row-span-3 ">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <Link href="/" className="font-primary">Web Development</Link>
+                </NavigationMenuLink>
+                </li>
+                <li className="row-span-3 ">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <Link href="/" className="font-primary">UI Design</Link>
                 </NavigationMenuLink>
                 </li>
                 </ul>
@@ -67,15 +77,15 @@ export default function Header() {
             </NavigationMenuContent>
             
             </NavigationMenuItem>
-            <NavigationMenuItem asChild>
+            <NavigationMenuItem>
             
-            <NavigationMenuLink>
-                    <Link href="/">About us</Link>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <Link href="/" className="font-primary">About us</Link>
                 </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem className="mr-5">
-            <NavigationMenuLink className="">
-                    <Link href="/" className="">Contact</Link>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <Link href="/" className="font-primary">Contact</Link>
                 </NavigationMenuLink>
             
             

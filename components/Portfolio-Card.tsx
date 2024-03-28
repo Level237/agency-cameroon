@@ -20,6 +20,7 @@ export default function PortfolioCard(props:any) {
       }}
       exit={{ 
         y:100,
+        x:-90,
         opacity:0,
        }}
        viewport={{ 
