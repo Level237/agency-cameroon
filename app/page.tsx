@@ -9,6 +9,7 @@ import ListServices from "@/components/services/List-services";
 import { PinContainer } from "@/components/ui/3d-pin";
 import InfiniteCarousel from "@/components/InfiniteCarousel";
 import { Button } from "@/components/ui/button";
+import PortfolioAnimate from "@/components/PortfolioAnimate";
 export default function Home() {
   return (
    <div>
@@ -26,14 +27,7 @@ export default function Home() {
   
 </section>
    <section className="container m-auto mt-36">
-    <div className="mb-20">
-      <h1 className="mt-10 font-primary text-2xl font-bold tracking-tight text-[#e8d1bb] sm:text-4xl">Attractive Portfolio</h1>
-    <InfiniteCarousel/>
-    <div className="flex justify-center mt-5 items-center">
-    <Button variant="default" className='bg-[#513417] dark:bg-[#e8d1bb] dark:[#513417]'>More Portfolio<FiArrowRight className="text-xl" /></Button>
-    </div>
-    
-    </div>
+    <PortfolioAnimate/>
     
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-white font-bold text-4xl font-primary">our Services</h2>
