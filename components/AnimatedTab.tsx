@@ -10,7 +10,7 @@ export default function AnimatedTabs() {
     const setActiveTab=tabStore(s=>s.setActiveTab)
     const activeTab=tabStore(s=>s.activeTab)
   return (
-    <div className="flex space-x-1">
+    <div className="flex justify-center p-8 space-x-1 bg-[#513417] w-[100vw]">
       {tabs.map((tab) => (
         <button
           key={tab.id}

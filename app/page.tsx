@@ -7,6 +7,8 @@ import InfiniteCarousel from "@/components/InfiniteCarousel";
 import PortfolioAnimate from "@/components/PortfolioAnimate";
 import AnimatedTabs from "@/components/AnimatedTab";
 import { Separator } from "@/components/ui/separator";
+
+
 export default function Home() {
   return (
    <div>
@@ -33,7 +35,7 @@ export default function Home() {
       <AnimatedTabs/>
       <Separator className="w-[90%] mt-3 h-[0.2px] mb-20 bg-[#e8d1bb2a]"/>
       </div>
-      
+   
       </section>
    </section>
    </div>
