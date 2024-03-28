@@ -11,7 +11,7 @@ export const tabStore=create<TabType>((set)=>({
     tabs:tabs,
     activeTab:1,
     setActiveTab:(id:number)=>{
-        set({activeTab:tabs[id - 1]?.id})
+        set({activeTab:tabs[id - 1].id})
         console.log(id);
     }
 }))
