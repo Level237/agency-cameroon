@@ -21,7 +21,7 @@ import Search from "./Search";
 export default function Header() {
   return (
    <header className="w-[100%] sticky  z-[30] bg-transparent backdrop-blur   border-b-[0.1px] border-[#e8d1bb38] top-0  py-4 px-4 sm:px-10 bg-[#000]  font-[sans-serif] min-h-[60px]">
-    <div className="flex flex-wrap items-center gap-x-2 max-lg:gap-y-6 justify-between">
+    <section className="flex flex-wrap items-center gap-x-2 max-lg:gap-y-6 justify-between">
         <div className="flex-1">
             <Image 
             src="/agency.png"
@@ -31,71 +31,77 @@ export default function Header() {
             />
        
         </div>
-        <div className="w-[500px]">
-        <NavigationMenu  className="text-white ">
+        <section className="flex items-center justify-center gap-3 w-[540px]">
+        <NavigationMenu>
             <NavigationMenuList>
-            <NavigationMenuItem className="bg-none hover:bg-[#e09a3969] hover:rounded">
-            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-[#09090B] text-white">
-                <ul className="">
-                <li className="row-span-3 ">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <Link href="/" className="font-primary">Graphic Design</Link>
+            <NavigationMenuItem>
+            <NavigationMenuTrigger >Services</NavigationMenuTrigger>
+            <NavigationMenuContent>
+                
+                <NavigationMenuLink href="/graphic" className="font-primary px-3 py-3">
+                    Graphic Design
                 </NavigationMenuLink>
-                </li>
-                <li className="row-span-3 ">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <Link href="/" className="font-primary">Web Development</Link>
+               
+                
+                <NavigationMenuLink href="/graphic" className="font-primary text-sm ">
+                    Web Development
                 </NavigationMenuLink>
-                </li>
-                <li className="row-span-3 ">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <Link href="/" className="font-primary">UI Design</Link>
-                </NavigationMenuLink>
-                </li>
-                </ul>
+              
+         
+                
+               
             </NavigationMenuContent>
             
             </NavigationMenuItem>
-            <NavigationMenuItem className="hover:bg-[#e09a3969] hover:rounded">
+            <NavigationMenuItem>
             <NavigationMenuTrigger>PortFolio</NavigationMenuTrigger>
-            <NavigationMenuContent  className="bg-[#09090B] text-white">
-                <ul className="p-4">
-                <li className="row-span-3">
+            <NavigationMenuContent>
+                
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     <Link href="/" className="text-white">Developpement web</Link>
                     
                 </NavigationMenuLink>
-                </li>
-                <li className="row-span-3">
+                
+              
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     <Link href="/" className="text-white">Branding</Link>
                     
                 </NavigationMenuLink>
-                </li>
-                </ul>
             </NavigationMenuContent>
             
             </NavigationMenuItem>
             <NavigationMenuItem>
             
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <Link href="/" className="font-primary">About us</Link>
+            <NavigationMenuLink >
+                   
                 </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem className="mr-5">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <Link href="/" className="font-primary">Contact</Link>
+            <NavigationMenuItem>
+            
+            <NavigationMenuLink href="/graphic" className="font-primary px-3 py-3">
+                    About
+                </NavigationMenuLink>
+            
+            
+            
+            
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+            <NavigationMenuLink href="/contact" className=" font-primary hover:bg-gray-800 hover:p-3 hover:rounded">
+                    Contact
+                    <div className="">
+
+                    </div>
                 </NavigationMenuLink>
             
             
             </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>
-        </div>
+        </section>
       <ToggleTheme/>
         
-    </div>
+    </section>
    </header>
 
   )

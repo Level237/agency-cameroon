@@ -16,7 +16,7 @@ export default function Home() {
 
   const portfolio=tabStore(s=>s.portfolio)
   return (
-   <div>
+   <section>
    <Header/>
    
    <section className="relative">
@@ -27,9 +27,7 @@ export default function Home() {
       
    </section>
 
-<section>
-  
-</section>
+
    <section className="container m-auto mt-36">
     <PortfolioAnimate/>
     
@@ -61,6 +59,6 @@ export default function Home() {
       </section>
       <Separator className="w-[100%] mt-3 h-[0.2px] mb-20 bg-[#e8d1bb2a]"/>
    </section>
-   </div>
+   </section>
   );
 }

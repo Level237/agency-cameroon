@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
+import dynamic from "next/dynamic";
 
 
 
@@ -15,6 +16,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const NoSSR = dynamic(() => import('./page'), { ssr: false })
   return (
     <html lang="en" className="bg-[#09090B]">
       <body className={cn(
@@ -26,7 +29,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-          {children}
+             {children}
+        
           </ThemeProvider>
           </body>
     </html>
