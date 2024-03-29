@@ -16,7 +16,7 @@ export default function Home() {
 
   const portfolio=tabStore(s=>s.portfolio)
   return (
-   <section>
+   <section className="dark:bg-[#09090B] bg-[#e8d1bb]">
    <Header/>
    
    <section className="relative">
