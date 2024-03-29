@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 export default function Hero() {
   return (
     
-      <section className="relative  isolate border-b-[0.1px] border-[#e8d1bb38] overflow-hidden bg-black">
+      <section className="relative  isolate border-b-[0.1px] border-[#e8d1bb38] bg-[#e8d1bb] overflow-hidden dark:bg-black">
   <svg
     className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
     aria-hidden="true">

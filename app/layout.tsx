@@ -19,7 +19,7 @@ export default function RootLayout({
 
   const NoSSR = dynamic(() => import('./page'), { ssr: false })
   return (
-    <html lang="en" className="bg-[#09090B]">
+    <html lang="en" className="dark:bg-[#09090B] bg-[#e8d1bb]">
       <body className={cn(
           "min-h-screen overflow-x-hidden",
         )}>
