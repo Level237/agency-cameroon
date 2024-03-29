@@ -59,6 +59,7 @@ export default function Home() {
          
         </div>
       </section>
+      <Separator className="w-[100%] mt-3 h-[0.2px] mb-20 bg-[#e8d1bb2a]"/>
    </section>
    </div>
   );

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { FaArrowAltCircleRight } from 'react-icons/fa'
 import {motion,AnimatePresence} from 'framer-motion'
 import Image from 'next/image'
+import { Badge } from './ui/badge'
 export default function CardImage(props:any) {
     const [showOverlay,setShowOverlay]=useState(false)
   return (
@@ -12,11 +13,16 @@ export default function CardImage(props:any) {
     onHoverStart={()=>setShowOverlay(true)}
     onHoverEnd={()=>setShowOverlay(false)}
     >
+       <div className='absolute  bottom-[10px] inset-0 z-10'>
+            <Badge  className='bg-black absolute bottom-0 rounded-lg bottom text-[#e8d1bb]'>Category</Badge>
+          </div>
         <AnimatePresence>
 
         
       {showOverlay && (
-        <motion.div className='absolute inset-0 z-10 flex justify-center items-center'
+        <section>
+         
+ <motion.div className='absolute inset-0 z-10 flex justify-center items-center'
         initial={{ 
             opacity:0,
          }}
@@ -50,6 +56,8 @@ export default function CardImage(props:any) {
             </motion.h1>
            
         </motion.div>
+        </section>
+       
       )}
       </AnimatePresence>
       <Image src={props.image} className='h-full' fill alt={props.image} style={{ objectFit:"cover" }}/>
