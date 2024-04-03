@@ -20,7 +20,7 @@ import Search from "./Search";
 
 export default function Header() {
   return (
-   <header className="w-[100%] sticky  z-[30] bg-transparent backdrop-blur   border-b-[0.1px] dark:border-[#e8d1bb38] border-[#5134173a] top-0  py-4 px-4 sm:px-10 dark:bg-[#000]  bg-[#e8d1bb]  font-[sans-serif] min-h-[60px]">
+   <header className="w-[100%] sticky  z-[30] bg-transparent backdrop-blur   border-b-[0.1px] dark:border-[#e8d1bb38] border-[#5134173a] top-0  py-4 px-4 sm:px-10 dark:bg-transparent  bg-[#e8d1bb]  font-[sans-serif] min-h-[60px]">
     <section className="flex flex-wrap items-center gap-x-2 max-lg:gap-y-6 justify-between">
         <div className="flex-1">
             <Image 
