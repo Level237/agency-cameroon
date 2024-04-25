@@ -33,7 +33,7 @@ export default function Home() {
     
       <ListServices/>
       <section className="mt-20">
-      <h1 className="mt-10 font-primary text-2xl font-bold tracking-tight text-[#e8d1bb] sm:text-4xl">Our Realisation</h1>
+      <h1 className="mt-10 font-primary text-2xl font-bold tracking-tight text-[#e8d1bb] sm:text-4xl">Our Realisations</h1>
       <div className="mt-12 flex flex-col items-center justify-center">
       <AnimatedTabs/>
       <Separator className="w-[90%] mt-3 h-[0.2px] mb-20 bg-[#e8d1bb2a]"/>

@@ -5,7 +5,7 @@ export default function ListServices() {
   return (
    <>
    <div className="flex  flex-col justify-center items-center">
-        <h2 className="text-white font-bold text-4xl font-primary">our Services</h2>
+        <h2 className="text-black dark:text-white font-bold text-4xl font-primary">our Services</h2>
         <Separator className="w-36 h-1 mr-16 bg-[#e09a39]"/>
       </div>
       <div className="grid mt-11 mb-11 grid-cols-3 container">
