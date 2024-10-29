@@ -35,39 +35,23 @@ export default function Header() {
         <NavigationMenu>
             <NavigationMenuList>
             <NavigationMenuItem>
-            <NavigationMenuTrigger >Services</NavigationMenuTrigger>
-            <NavigationMenuContent>
-                
-                <NavigationMenuLink href="/graphic" className="font-primary px-3 py-3">
-                    Graphic Design
+            
+            <NavigationMenuLink href="" className="font-primary px-3 py-3">
+                    Services
                 </NavigationMenuLink>
-               
-                
-                <NavigationMenuLink href="/graphic" className="font-primary text-sm ">
-                    Web Development
-                </NavigationMenuLink>
-              
-         
-                
-               
-            </NavigationMenuContent>
+            
+            
+            
             
             </NavigationMenuItem>
             <NavigationMenuItem>
-            <NavigationMenuTrigger>PortFolio</NavigationMenuTrigger>
-            <NavigationMenuContent>
-                
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <Link href="/" className="text-white">Developpement web</Link>
-                    
+            
+            <NavigationMenuLink href="" className="font-primary px-3 py-3">
+                   Portfolio
                 </NavigationMenuLink>
-                
-              
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <Link href="/" className="text-white">Branding</Link>
-                    
-                </NavigationMenuLink>
-            </NavigationMenuContent>
+            
+            
+            
             
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -78,7 +62,7 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
             
-            <NavigationMenuLink href="/graphic" className="font-primary px-3 py-3">
+            <NavigationMenuLink href="" className="font-primary px-3 py-3">
                     About
                 </NavigationMenuLink>
             
@@ -87,12 +71,12 @@ export default function Header() {
             
             </NavigationMenuItem>
             <NavigationMenuItem>
-            <NavigationMenuLink href="/contact" className=" font-primary hover:bg-gray-800 hover:p-3 hover:rounded">
-                    Contact
-                    <div className="">
-
-                    </div>
+            
+            <NavigationMenuLink href="" className="font-primary px-3 py-3">
+                  Contact
                 </NavigationMenuLink>
+            
+            
             
             
             </NavigationMenuItem>
