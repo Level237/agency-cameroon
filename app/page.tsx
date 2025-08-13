@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -16,6 +17,10 @@ export default function Home() {
   const [cursorX, setCursorX] = useState(0);
   const [cursorY, setCursorY] = useState(0);
   const [isPressed, setIsPressed] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
+  const [exitOrigin, setExitOrigin] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [isEntering, setIsEntering] = useState(true);
+  const router = useRouter();
   useEffect(() => {
     const id = setInterval(() => {
       setCurrentMessageIndex((v) => (v + 1) % sliderMessages.length);
@@ -38,6 +43,16 @@ export default function Home() {
       window.removeEventListener('mouseup', handleUp);
     };
   }, []);
+  useEffect(() => {
+    const t = setTimeout(() => setIsEntering(false), 900);
+    return () => clearTimeout(t);
+  }, []);
+  const handleExitAndNavigate = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
+    e.preventDefault();
+    setExitOrigin({ x: e.clientX, y: e.clientY });
+    setIsExiting(true);
+    setTimeout(() => router.push(href), 1300);
+  };
   return (
     <div className="h-screen overflow-hidden  relative cursor-none">
       {/* Creative Animated Background */}
@@ -117,6 +132,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-[#e8d1bb] max-sm:hidden  text-[#09090B] px-6 py-2 rounded-full text-sm font-medium hover:bg-[#e8d1bb]/90 transition-all duration-300"
+              onClick={(e) => handleExitAndNavigate(e, '/agence')}
             >
               demandez un devis
             </motion.button>
@@ -199,11 +215,12 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.5 }}
             >
-              <Link href="/agence">
+              <Link href="/agence" onClick={(e) => e.preventDefault()}>
                 <motion.button
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-transparent cursor-pointer text-sm border-2 border-[#e8d1bb] text-[#e8d1bb] px-10 py-4 rounded-full text-lg font-semibold hover:bg-[#e8d1bb] hover:text-[#09090B] transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
+                  onClick={(e) => handleExitAndNavigate(e, '/agence')}
                 >
                   découvrir l'agence
                 </motion.button>
@@ -246,6 +263,94 @@ export default function Home() {
           />
         </div>
       </motion.div>
+
+      {/* Exit Transition Overlay: diagonal sweep + centered logo */}
+      <AnimatePresence>
+        {isExiting && (
+          <motion.div
+            className="fixed inset-0 z-[9998]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {/* Diagonal sweep */}
+            <div className="absolute inset-0">
+              {Array.from({ length: 7 }).map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute -top-10 -bottom-10"
+                  style={{
+                    left: `${i * (100 / 7)}%`,
+                    width: `${100 / 7 + 8}%`,
+                    transform: 'skewY(-8deg)',
+                    background: i % 2 === 0
+                      ? 'linear-gradient(180deg, #724a23, #583618)'
+                      : 'linear-gradient(180deg, #8a5a2b, #64401f)'
+                  }}
+                  initial={{ x: '120%' }}
+                  animate={{ x: '0%' }}
+                  transition={{ duration: 0.7, delay: i * 0.07, ease: [0.2, 0.8, 0.2, 1] }}
+                />
+              ))}
+            </div>
+            {/* Centered logo */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, ease: [0.2, 0.8, 0.2, 1] }}
+                className="text-3xl md:text-5xl font-bold tracking-[0.35em] uppercase text-[#e8d1bb]"
+              >
+                AGENCY
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Entry Transition Overlay: panels sweep out + centered logo */}
+      <AnimatePresence>
+        {isEntering && (
+          <motion.div
+            className="fixed inset-0 z-[9998]"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+          >
+            <div className="absolute inset-0">
+              {Array.from({ length: 7 }).map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute -top-10 -bottom-10"
+                  style={{
+                    left: `${i * (100 / 7)}%`,
+                    width: `${100 / 7 + 8}%`,
+                    transform: 'skewY(-8deg)',
+                    background: i % 2 === 0
+                      ? 'linear-gradient(180deg, #724a23, #583618)'
+                      : 'linear-gradient(180deg, #8a5a2b, #64401f)'
+                  }}
+                  initial={{ x: '0%' }}
+                  animate={{ x: '-120%' }}
+                  transition={{ duration: 0.7, delay: i * 0.06, ease: [0.2, 0.8, 0.2, 1] }}
+                />
+              ))}
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <motion.div
+                initial={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
+                className="text-3xl md:text-5xl font-bold tracking-[0.35em] uppercase text-[#e8d1bb]"
+              >
+                AGENCY
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
