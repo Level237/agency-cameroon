@@ -39,169 +39,48 @@ export default function Home() {
     };
   }, []);
   return (
-    <div className="h-screen overflow-hidden bg-[#0000]  relative cursor-none">
+    <div className="h-screen overflow-hidden  relative cursor-none">
       {/* Creative Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Animated grid pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-                <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#e8d1bb" strokeWidth="0.5" opacity="0.3" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-          </svg>
-        </div>
+        {/* Base gradient overlay to deepen tones */}
+        <div className="absolute inset-0 " />
 
-        {/* Floating geometric shapes */}
+        {/* Gradient mesh blobs */}
         <motion.div
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute top-20 left-20 w-32 h-32 border border-[#e8d1bb]/30 rounded-full"
+          animate={{ scale: [1, 1.05, 1], x: [0, 20, 0], y: [0, -10, 0] }}
+          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-24 -left-24 w-[42rem] h-[42rem] rounded-full blur-3xl opacity-40"
+          style={{ background: "radial-gradient(closest-side, #7c3aed, transparent)" }}
         />
         <motion.div
-          animate={{
-            rotate: [360, 0],
-            scale: [1, 0.8, 1],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute top-40 right-32 w-24 h-24 border border-[#e8d1bb]/30 transform rotate-45"
+          animate={{ scale: [1, 0.95, 1], x: [0, -30, 0], y: [0, 20, 0] }}
+          transition={{ duration: 16, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          className="absolute top-1/3 right-[-10rem] w-[36rem] h-[36rem] rounded-full blur-3xl opacity-35"
+          style={{ background: "radial-gradient(closest-side, #06b6d4, transparent)" }}
         />
         <motion.div
-          animate={{
-            y: [0, -30, 0],
-            rotate: [0, 180, 360],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute bottom-32 left-1/3 w-20 h-20 border border-[#e8d1bb]/20 rounded-full"
+          animate={{ scale: [1, 1.08, 1], x: [0, 25, 0], y: [0, 15, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+          className="absolute bottom-[-8rem] left-1/4 w-[48rem] h-[48rem] rounded-full blur-3xl opacity-30"
+          style={{ background: "radial-gradient(closest-side, #f472b6, transparent)" }}
         />
 
-        {/* Animated lines */}
+        {/* Moving light beam */}
         <motion.div
-          animate={{
-            scaleX: [0, 1, 0],
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#e8d1bb] to-transparent"
-        />
-        <motion.div
-          animate={{
-            scaleX: [0, 1, 0],
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-          className="absolute bottom-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent  to-transparent"
+          initial={{ x: "-30%" }}
+          animate={{ x: ["-30%", "130%", "-30%"] }}
+          transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/4 h-[2px] w-1/3 md:w-1/2 bg-[linear-gradient(90deg,transparent,rgba(232,209,187,0.4),transparent)] opacity-60"
         />
 
-        {/* Particle system */}
-        <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-[#e8d1bb] rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                opacity: [0, 1, 0],
-                scale: [0, Math.random() * 2 + 0.5, 0],
-                y: [0, -Math.random() * 100 - 50],
-              }}
-              transition={{
-                duration: Math.random() * 4 + 3,
-                repeat: Infinity,
-                delay: Math.random() * 3,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Gradient orbs */}
-        <motion.div
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-            scale: [1, 1.2, 1],
+        {/* Subtle grain for texture */}
+        <div
+          className="absolute inset-0 opacity-[0.05] pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)",
+            backgroundSize: "3px 3px",
           }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-1/3 right-1/4 w-48 h-48 bg-gradient-radial from-[#e8d1bb]/20 via-transparent to-transparent rounded-full blur-2xl"
         />
-        <motion.div
-          animate={{
-            x: [0, -80, 0],
-            y: [0, 60, 0],
-            scale: [1, 0.8, 1],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-          className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-gradient-radial from-[#e8d1bb]/15 via-transparent to-transparent rounded-full blur-3xl"
-        />
-
-        {/* Animated waves */}
-        <motion.div
-          animate={{
-            x: [0, -100, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute bottom-0 left-0 right-0 h-32 opacity-20"
-        >
-          <svg viewBox="0 0 1200 120" className="w-full h-full">
-            <path
-              d="M0,120 C300,80 600,100 900,60 C1050,40 1200,80 1200,120 L1200,120 L0,120 Z"
-              fill="url(#waveGradient)"
-            />
-            <defs>
-              <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#e8d1bb" stopOpacity="0.4" />
-                <stop offset="50%" stopColor="#09090B" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="#e8d1bb" stopOpacity="0.4" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </motion.div>
-
-        {/* Parallax Mountain Image */}
-
-
       </div>
 
       {/* Navigation */}
@@ -324,7 +203,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-transparent text-sm border-2 border-[#e8d1bb] text-[#e8d1bb] px-10 py-4 rounded-full text-lg font-semibold hover:bg-[#e8d1bb] hover:text-[#09090B] transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
+                  className="bg-transparent cursor-pointer text-sm border-2 border-[#e8d1bb] text-[#e8d1bb] px-10 py-4 rounded-full text-lg font-semibold hover:bg-[#e8d1bb] hover:text-[#09090B] transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
                 >
                   découvrir l'agence
                 </motion.button>
